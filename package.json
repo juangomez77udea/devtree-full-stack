@@ -1,18 +1,30 @@
 {
   "name": "devtree",
-  "type":"module",
   "version": "1.0.0",
   "description": "Primer proyecto con Express y TypeScript",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch index.js"
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "author": "Juan Carlos Gomez",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.2.1"
+    "bcrypt": "^6.0.0",
+    "colors": "^1.4.0",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.1",
+    "mongoose": "^9.1.6",
+    "slug": "^11.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.6",
+    "@types/slug": "^5.0.9",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

@@ -1,0 +1,24 @@
+import { Router } from 'express';
+import { body } from 'express-validator'
+import { createAccount } from './handlers';
+
+const router = Router();
+
+/** Autenticación y registro */
+router.post('/auth/register',
+
+      body('handle')
+            .notEmpty()
+            .withMessage('El handle no puede estar vacío'),
+      body('name')
+            .notEmpty()
+            .withMessage('El nombre no puede estar vacío'),
+      body('email')
+            .isEmail()
+            .withMessage('Email no válido'),
+      body('password')
+            .isLength({min: 8})
+            .withMessage('La contraseña debe tener al menos 8 caracteres'),
+      createAccount);
+
+export default router;7
