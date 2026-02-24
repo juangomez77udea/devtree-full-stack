@@ -12,6 +12,7 @@
   "author": "Juan Carlos Gomez",
   "license": "ISC",
   "dependencies": {
+    "@headlessui/react": "^2.2.9",
     "bcrypt": "^6.0.0",
     "cloudinary": "^2.9.0",
     "colors": "^1.4.0",
